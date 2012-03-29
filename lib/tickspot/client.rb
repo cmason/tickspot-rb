@@ -1,10 +1,10 @@
 require 'httparty'
+require 'hashie'
 
 module Tickspot
 
   class Client
     include HTTParty
-    
     attr_reader :company, :email, :password
 
     def initialize(company = Tickspot.company, email = Tickspot.email, password = Tickspot.password)
@@ -22,7 +22,7 @@ module Tickspot
     #
     def clients(options = {})
       options.merge!(:email => @email, :password => @password)
-      self.class.post("/clients", :query => options)["clients"]
+      self.class.post("/clients", :query => options)["clients"].map {|obj| Hashie::Mash.new obj }
     end
     
     # The projects method will return projects filtered by the parameters provided. 
@@ -36,7 +36,7 @@ module Tickspot
     #
     def projects(options = {})
       options.merge!(:email => @email, :password => @password)
-      self.class.post("/projects", :query => options)["projects"]
+      self.class.post("/projects", :query => options)["projects"].map {|obj| Hashie::Mash.new obj }
     end
 
     # The tasks method will return a list of all the current tasks for a specified project 
@@ -52,14 +52,14 @@ module Tickspot
     #
     def tasks(options = {})
       options.merge!(:email => @email, :password => @password)
-      self.class.post("/tasks", :query => options)["tasks"]
+      self.class.post("/tasks", :query => options)["tasks"].map {|obj| Hashie::Mash.new obj }
     end
     
     # The method will return a list of all clients, projects, and tasks 
     # that are assigned to the user and available for time entries (open).
     #
     def clients_projects_tasks
-      self.class.post("/clients_projects_tasks", :query => {:email => @email, :password => @password})
+      self.class.post("/clients_projects_tasks", :query => {:email => @email, :password => @password})["clients"].map {|obj| Hashie::Mash.new obj }
     end   
     
     # The entries method will return a list of all entries that meet the provided criteria. 
@@ -85,14 +85,14 @@ module Tickspot
     #
     def entries(options = {})
       options.merge!(:email => @email, :password => @password)
-      self.class.post("/entries", :query => options)["entries"]
+      self.class.post("/entries", :query => options)["entries"].map {|obj| Hashie::Mash.new obj }
     end
     
     # The users method will return a list of the most recently used tasks. 
     # This is useful for generating quick links for a user to select a task they have been using recently.
     #
     def recent_tasks
-      self.class.post("/recent_tasks", :query => {:email => @email, :password => @password})
+      self.class.post("/recent_tasks", :query => {:email => @email, :password => @password})['recent_tasks'].map {|obj| Hashie::Mash.new obj }
     end
     
     # The users method will return a list of users.
@@ -102,7 +102,7 @@ module Tickspot
     #
     def users(options = {})
       options.merge!(:email => @email, :password => @password)
-      self.class.post("/users", :query => options)["users"]
+      self.class.post("/users", :query => options)['users'].map {|obj| Hashie::Mash.new obj }
     end
     
     # The create_entry method will accept a time entry for a specified task_id 
