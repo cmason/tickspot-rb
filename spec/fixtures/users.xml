@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users type="array">
+  <user>
+    <id type="integer">64272</id>
+    <first_name>Bugs</first_name>
+    <last_name>Bunny</last_name>
+    <email>bugs@example.com</email>
+    <created_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</created_at>
+    <updated_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</updated_at>
+  </user>
+  <user>
+    <id type="integer">64272</id>
+    <first_name>Elmer</first_name>
+    <last_name>Fudd</last_name>
+    <email>elmer@example.com</email>
+    <created_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</created_at>
+    <updated_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</updated_at>
+  </user>
+  <user>
+    <id type="integer">64272</id>
+    <first_name>Daffy</first_name>
+    <last_name>Duck</last_name>
+    <email>daffy@example.com</email>
+    <created_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</created_at>
+    <updated_at type="datetime">Thu, 04 Nov 2010 17:31:06 -0400</updated_at>
+  </user>
+</users>
