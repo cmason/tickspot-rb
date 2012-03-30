@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Tickspot::VERSION
   s.authors     = ["Chris Mason"]
   s.email       = ["chris@chaione.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/cmason/tickspot-rb"
   s.description = %q{Ruby wrapper for the Tick API  http://tickspot.com/api}
   s.summary     = s.description
 
