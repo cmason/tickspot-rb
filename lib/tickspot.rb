@@ -1,5 +1,3 @@
-require "tickspot/version"
-
 module Tickspot
   
   class << self
@@ -22,7 +20,6 @@ module Tickspot
     end
   end
   
-  # autoload :Api,     "tickspot/api"
   autoload :Client,  "tickspot/client"
-  # autoload :Version, "tickspot/version"
+  autoload :Version, "tickspot/version"
 end
