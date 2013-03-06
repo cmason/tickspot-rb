@@ -1,5 +1,7 @@
 # Tickspot-rb
 
+[![Code Climate](https://codeclimate.com/github/cmason/tickspot-rb.png)](https://codeclimate.com/github/cmason/tickspot-rb)
+
 Ruby wrapper for the [Tick API](http://www.tickspot.com/api/).
 
 ## Installation
