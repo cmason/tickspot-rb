@@ -6,11 +6,15 @@ Ruby wrapper for the [Tick API](http://www.tickspot.com/api/).
 
     $ gem install tickspot-rb
 
+## Bundler
+
+    gem "tickspot-rb", :require => 'tickspot'
+
 ## Example Usage
 
     require 'tickspot'
-    
-    tick = Tickspot::Client.new('myCompanyName', 'myemail@example.com', 'myTickPassword')    
+
+    tick = Tickspot::Client.new('myCompanyName', 'myemail@example.com', 'myTickPassword')
     tick.clients
 
     => [{"id"=>123, "name"=>"Acme"}, {"id"=>231, "name"=>"Sterling Cooper"}, {"id"=>321, "name"=>"Justice League"}]
@@ -23,7 +27,7 @@ You can also initialize the client with a configuration block:
       config.email = 'wilie@acme.com'
       config.password = 'secret'
     end
-    
+
     # elsewhere
     client = Tickspot::Client.new
 
