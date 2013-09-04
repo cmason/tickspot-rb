@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/cmason/tickspot-rb"
   s.description = %q{Ruby wrapper for the Tick API  http://tickspot.com/api}
   s.summary     = s.description
+  s.license     = 'MIT'
 
   s.rubyforge_project = "tickspot-rb"
 

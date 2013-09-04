@@ -47,4 +47,4 @@ You can also initialize the client with a configuration block:
 
 ## Copyright
 
-Copyright (c) 2012 Chris Mason. See LICENSE for details.
+Copyright (c) 2012 Chris Mason. See [LICENSE](LICENSE) for details.
