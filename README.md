@@ -2,6 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/cmason/tickspot-rb.png)](https://codeclimate.com/github/cmason/tickspot-rb)
 [![Build Status](https://travis-ci.org/cmason/tickspot-rb.png?branch=master)](https://travis-ci.org/cmason/tickspot-rb)
+[![Gem Version](https://badge.fury.io/rb/tickspot-rb.png)](http://badge.fury.io/rb/tickspot-rb)
 
 Ruby wrapper for the [Tick API](http://www.tickspot.com/api/).
 
